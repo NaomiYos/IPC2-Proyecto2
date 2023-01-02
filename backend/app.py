@@ -1,4 +1,5 @@
 from flask  import Flask, json, request, jsonify
+import xml.etree.cElementTree as ET
 from flask_cors import CORS
 from playlist import ListaPlaylist
 ListP=ListaPlaylist()
@@ -34,5 +35,13 @@ def deletePlaylist():
         return jsonify({ "mensaje": "Usuario con id " + str(idP) + " eliminado con éxito" }), 200
     else:
         return jsonify({ "mensaje": "Usuario no encontrado" }), 404
+
+@app.route('/agregarCanciones',methods=['POST'])
+def agregarCanciones():
+    xml=request.data.decode('utf-8')
+    raiz=ET.XML(xml)
+    for elemento in raiz:
+        gestor.agregar_cancion(elemento.attrib['name'],elemento.attrib['artist'],elemento.attrib['image'],elemento.text)
+    return jsonify({'ok':True,'message':'Canciones cargadas con exito'}),200
 if __name__== '__main__':
     app.run(debug=True, port=3000)

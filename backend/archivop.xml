@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<data>
+<playlistClientes>
+    <playlist id='$idPlaylist'>
+        <nitCliente>$nitCliente</nitCliente>
+        <vinyl>valorBooleano</vinyl>
+        <compacto>valorBooleano</compacto>
+        <categoria>$tipoCategoria</categoria>
+            <canciones>
+            <cancion id='$idCancion'>
+            <nombre>$nombreCancion</nombre>
+            <anio>$anioCancion</anio>
+            <artista>$nombreArtista</artista>
+            <genero>$generoCancion</genero>
+            </cancion>
+            <cancion id='$idCancion'>
+            <nombre>$nombreCancion</nombre>
+            <anio>$anioCancion</anio>
+            <artista>$nombreArtista</artista>
+            <genero>$generoCancion</genero>
+            </cancion>
+            <cancion id='$idCancion'>
+            <nombre>$nombreCancion</nombre>
+            <anio>$anioCancion</anio>
+            <artista>$nombreArtista</artista>
+            <genero>$generoCancion</genero>
+            </cancion>
+            <cancion id='$idCancion3'>
+            <nombre>$nombreCancion</nombre>
+            <anio>$anioCancion</anio>
+            <artista>$nombreArtista</artista>
+            <genero>$generoCancion</genero>
+            </cancion>
+            </canciones>
+    </playlist>
+    <playlist id='$idPlaylis2'>
+        <nitCliente>$nitCliente2</nitCliente>
+        <vinyl>valorBooleano2</vinyl>
+        <compacto>valorBooleano2</compacto>
+        <categoria>$tipoCategoria2</categoria>
+        <canciones>
+            <cancion id='$idCancion2'>
+            <nombre>$nombreCancion</nombre>
+            <anio>$anioCancion</anio>
+            <artista>$nombreArtista</artista>
+            <genero>$generoCancion</genero>
+            </cancion>
+            <cancion id='$idCancion2'>
+            <nombre>$nombreCancion</nombre>
+            <anio>$anioCancion</anio>
+            <artista>$nombreArtista</artista>
+            <genero>$generoCancion</genero>
+            </cancion>
+        </canciones>
+    </playlist>
+</playlistClientes>
+<listaClientes>
+    <cliente nit="$nitCliente">
+        <nombre> $nombreCliente </nombre>
+        <usuario> $nombreUsuario </usuario>
+        <clave> $claveUsuario </clave>
+        <direccion> $direccionCliente </direccion>
+        <correoElectronico> $eMailCliente </correoElectronico>
+        <empresa> $idEmpresa </empresa>
+            <playlistsAsociadas>
+            <playlist>$idPlaylist</playlist>
+            <playlist>$idPlaylist</playlist>
+            <playlist>$idPlaylist</playlist>
+            </playlistsAsociadas>
+    </cliente>
+</listaClientes>
+
+<listaEmpresas>
+    <empresa id='$idEmpresa'>
+        <nombre>$nombreEmpresa</nombre>
+    </empresa>
+</listaEmpresas>
+</data>
