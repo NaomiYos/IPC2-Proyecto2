@@ -7,10 +7,18 @@ LisEmpresa=ListaEmpresa()
 ListP=ListaPlaylist()
 ListCliente=ListaCliente()
 class Lectura():
-    def cargarArchivo(self,ruta):
+     def cargarArchivo(self,ruta):
         Tree=ET.parse(ruta)
         raiz=Tree.getroot()
         for objeto in raiz:
+            for listempresa in objeto.iter('listaEmpresas'):
+                for empresa in listempresa:
+                     idempresa=empresa.attrib["id"]
+                     for ne in empresa.iter("nombre"):
+                        nempresa=ne.text
+                     cliententrontrado=ListCliente.BuscarEmpresa(idempresa)
+                     LisEmpresa.AgregarEmpresa(idempresa,nempresa)
+                     print("idempresa "+idempresa+" nombre empresa "+nempresa)
             for playlist in objeto.iter('playlistClientes'):
                 for play in playlist:
                     
@@ -25,7 +33,7 @@ class Lectura():
                         catP=categoria.text
                         #print(categoria.text)
                     ListP.AgregarPlaylist(play.attrib["id"],nitC,vynilP,catP)
-                   # print("PPlaylist "+play.attrib["id"]+nitC+vynilP+catP)
+                    #print("PPlaylist "+play.attrib["id"]+nitC+vynilP+catP)
                     #objetoplay=ListP.BuscarPlaylist(play.attrib["id"])
                     
                     for canciones in play.iter("canciones"):
@@ -45,7 +53,7 @@ class Lectura():
                             
                             ListP.AgregarCancionP(play.attrib["id"],cancion.attrib["id"],namecancion,acancion,artistC,generoC)
                             #print(cancion.attrib["id"]+nombrecancion.text+acancion+artistC+generoC)
-                    #print("PPlaylist "+play.attrib["id"]+nitC+vynilP+catP)
+            Listaobtenida=ListP.Obtenerlista()        #print("PPlaylist "+play.attrib["id"]+nitC+vynilP+catP)
 
                     
 
@@ -65,6 +73,7 @@ class Lectura():
                         correoc=correocliente.text
                     for empresacliente in  cliente.iter("empresa"):
                         empresacli=empresacliente.text
+                    LisEmpresa.AgregarCliente(idempresa,nit,namecliente,usuario,clave,direccion,correoc,empresacli))
                     ListCliente.AgregarCliente(nit,namecliente,usuario,clave,direccion,correoc,empresacli)
                 
                     for playlistcliente in cliente.iter("playlistsAsociadas"):
@@ -76,24 +85,10 @@ class Lectura():
                                 pclientes.append(playencontrada)
                         ListCliente.Agregaplaylectura(pclientes,nit)
                             
-            for listempresa in objeto.iter('listaEmpresas'):
-                for empresa in listempresa:
-                     idempresa=empresa.attrib["id"]
-                     for ne in empresa.iter("nombre"):
-                        nempresa=ne.text
-                     LisEmpresa.AgregarEmpresa(idempresa,nempresa)
-                     cliententrontrado=ListCliente.BuscarEmpresa(idempresa)
-                     for cliente in cliententrontrado:
-                        LisEmpresa.AsignarClienteE(cliente,idempresa)
-                     
-                     print("idempresa "+idempresa+" nombre empresa "+nempresa)
-                   
-        ListP.Imprimir()
-        ListCliente.ImprimirClientes()
-        LisEmpresa.ImprimirEmpresa()
+           
+        #ListP.Imprimir()
+        #ListCliente.ImprimirClientes()
 
 
 
 
-l=Lectura()
-l.cargarArchivo(r"C:\Users\Naomi Rashel\Documents\2dosemestre20222\vacas\ipc2\Proyecto2\backend\ArchivoP2.xml")

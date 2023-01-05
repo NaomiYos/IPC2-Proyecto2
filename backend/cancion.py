@@ -12,18 +12,17 @@ class Cancion:
             "anio": self.anio,
             "artista": self.artista,
             "genero": self.genero,
-            
-
-        }
-    def __str__(self):
-        return f'Name: {self.nombre}'
+              }
    
 class ListaCancion:
-    def __init__(self) -> None:
+    def __init__(self):
         self.Canciones=[]
     def AgregarCancion(self,idcr,nombrer,anior,artistar,generor):
         nuevo=Cancion(idcr,nombrer,anior,artistar,generor)
         self.Canciones.append(nuevo)
+        #for can in self.Canciones:
+        #    print ("Name Can: " + can.nombre)
+
         return nuevo.dump()
     def LeerCancion(self):
         CancionJSON = []
@@ -35,8 +34,10 @@ class ListaCancion:
             if producto.idc == id:
                 self.Canciones.remove(producto)
                 return True
-        return False
+   
     def ImprimirCancion(self):
-        for cancion in self.Canciones:
-        
-           print("cancion "+str(cancion.idc)+str(cancion.nombre))
+
+        for cancion in self.Canciones:  
+            #print("cancion-") 
+            print("cancion "+str(cancion.idc)+" "+str(cancion.nombre))
+           

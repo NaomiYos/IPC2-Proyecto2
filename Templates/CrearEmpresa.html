@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +7,7 @@
 	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
 
 	<!-- title -->
-	<title>Cliente</title>
+	<title>Crear Venta</title>
 
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/png" href="assets/img/carrito.png">
@@ -59,29 +59,25 @@
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li class="current-list-item"><a href="home.html">Home</a>
-								</li>
+								
 								<li><a >Cliente</a>
 								<ul class="sub-menu">
 									<li><a href="CrearCliente.html">Crear Cliente</a></li>
-									<li><a href="ActualizarCliente.html">Actualizar Cliente</a></li>
 									<li><a href="TablaCliente.html">Tabla Cliente</a></li>
 								</ul>
 							</li>
 								
-								<li><a href="#">Producto</a>
+								<li><a href="#">Playlist</a>
 									<ul class="sub-menu">
-										<li><a href="#">Crear producto</a></li>
-										<li><a href="#">Actualizar producto</a></li>
+										<li><a href="crearplaylist.html">Crear Playlist</a></li>
 										<li><a href="Tablaproducto.html">Tabla producto</a></li>
 										
 									</ul>
 								</li>
-								<li><a href="#">Vendedor</a>
+								<li><a href="#">Empresa</a>
 									<ul class="sub-menu">
-										<li><a href="CrearVenta.html">Crear Vendedor</a></li>
-										<li><a href="ActualizarVenta.html">Acualizar Vendedor</a></li>
-										<li><a href="Tablaventa.html">Tabla Vendedor</a></li>
+										<li><a href="CrearEmpresa.html">Crear Empresa</a></li>
+										<li><a href="Tablaventa.html">Tabla Empresa</a></li>
 									</ul>
 								</li>
 								
@@ -129,7 +125,7 @@
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="breadcrumb-text">
 					
-						<h1>Crear Cliente</h1>
+						<h1>Crear Venta</h1>
 					</div>
 				</div>
 			</div>
@@ -138,7 +134,7 @@
 	<!-- end breadcrumb section -->
 
 	<!-- contact form -->
-	<div  class="contact-from-section mt-150 mb-150">
+	<div class="contact-from-section mt-150 mb-150">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 mb-5 mb-lg-0">
@@ -146,20 +142,22 @@
 					<div class="contact-form">
 						<form type="POST" id="fruitkha-contact" onSubmit="return valid_datas( this );">
 							<p>
-								<input type="text" placeholder="Nombre" name=""id="txtmail" >
-								<input type="email" placeholder="Correo" name="" id="txtnombre">
+								<input type="text" placeholder="IdEmpresa" name=""id="txtidempresa" >
+								<input type="text" placeholder="Nombre" name=""id="txtidempresa" >
 							</p>
 							<p>
-								<input type="tel" placeholder="Apellido" name="" id="txtapellido">
-								<input type="text" placeholder="Contraseña" name="" id="txtcontra">
+								<input type="text" placeholder="DPI" name="" id="txtdpi">
+								<input type="text" placeholder="Nombre Cliente" name="" id="txtnombre">
+								
 							</p>
 							<p>
-								<input type="text" placeholder="Edad" name="" id="txtedad">
-								<input type="text" placeholder="compras" name="" id="txtcompra">
+								<input type="text" placeholder="Producto" name="" id="txtproductos">
+								<input type="tel" placeholder="Total" name="" id="txttotal">
+							
 							</p>
 							
 							<input type="hidden" name="token" value="FsWga4&@f6aw" />
-							<p><input type="submit" value="Submit"></p>
+							<a type="button" onclick="CrearVenta()"  class="boxed-btn">Crear</a>
 						</form>
 					</div>
 				</div>
@@ -203,8 +201,8 @@
 	<!-- end copyright -->
 	
 	<!-- jquery -->
+	<script src="assets/js/newobject.js"></script>
 	<script src="assets/js/jquery-1.11.3.min.js"></script>
-	<script src="assets/js/tablas.js"></script>
 	<!-- bootstrap -->
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 	<!-- count down -->

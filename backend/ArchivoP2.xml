@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <data>
 <playlistClientes>
     <playlist id='$idPlaylist'>
@@ -7,26 +7,26 @@
         <compacto>valorBooleano</compacto>
         <categoria>$tipoCategoria</categoria>
             <canciones>
-            <cancion id='$idCancion'>
-            <nombre>$nombreCancion</nombre>
+            <cancion id='$idCancion1'>
+            <nombre>$Dino</nombre>
             <anio>$anioCancion</anio>
             <artista>$nombreArtista</artista>
             <genero>$generoCancion</genero>
             </cancion>
-            <cancion id='$idCancion'>
-            <nombre>$nombreCancion</nombre>
-            <anio>$anioCancion</anio>
-            <artista>$nombreArtista</artista>
-            <genero>$generoCancion</genero>
-            </cancion>
-            <cancion id='$idCancion'>
-            <nombre>$nombreCancion</nombre>
+            <cancion id='$idCancion2'>
+            <nombre>$cancion2</nombre>
             <anio>$anioCancion</anio>
             <artista>$nombreArtista</artista>
             <genero>$generoCancion</genero>
             </cancion>
             <cancion id='$idCancion3'>
-            <nombre>$nombreCancion</nombre>
+            <nombre>$cancion3</nombre>
+            <anio>$anioCancion</anio>
+            <artista>$nombreArtista</artista>
+            <genero>$generoCancion</genero>
+            </cancion>
+            <cancion id='$idCancion4'>
+            <nombre>$cancion4</nombre>
             <anio>$anioCancion</anio>
             <artista>$nombreArtista</artista>
             <genero>$generoCancion</genero>
@@ -39,17 +39,37 @@
         <compacto>valorBooleano2</compacto>
         <categoria>$tipoCategoria2</categoria>
         <canciones>
-            <cancion id='$idCancion2'>
-            <nombre>$nombreCancion</nombre>
+            <cancion id='$idCancion21'>
+            <nombre>$cancion21</nombre>
             <anio>$anioCancion</anio>
             <artista>$nombreArtista</artista>
             <genero>$generoCancion</genero>
             </cancion>
-            <cancion id='$idCancion2'>
-            <nombre>$nombreCancion</nombre>
+            <cancion id='$idCancion22'>
+            <nombre>$Cancion22</nombre>
             <anio>$anioCancion</anio>
             <artista>$nombreArtista</artista>
             <genero>$generoCancion</genero>
+            </cancion>
+        </canciones>
+    </playlist>
+    <playlist id='$idPlaylis3'>
+        <nitCliente>$nitCliente3</nitCliente>
+        <vinyl>valorBooleano3</vinyl>
+        <compacto>valorBooleano3</compacto>
+        <categoria>$tipoCategoria3</categoria>
+        <canciones>
+            <cancion id='$idCancion31'>
+            <nombre>$cancion31</nombre>
+            <anio>$anioCancion31</anio>
+            <artista>$nombreArtista31</artista>
+            <genero>$generoCancion31</genero>
+            </cancion>
+            <cancion id='$idCancion32'>
+            <nombre>$Cancion32</nombre>
+            <anio>$anioCancion32</anio>
+            <artista>$nombreArtista32</artista>
+            <genero>$generoCancion32</genero>
             </cancion>
         </canciones>
     </playlist>
@@ -64,8 +84,21 @@
         <empresa> $idEmpresa </empresa>
             <playlistsAsociadas>
             <playlist>$idPlaylist</playlist>
+            <playlist>$idPlaylis2</playlist>
+            
+            </playlistsAsociadas>
+    </cliente>
+    <cliente nit="$nitCliente2">
+        <nombre> $nombreCliente2 </nombre>
+        <usuario> $nombreUsuario2 </usuario>
+        <clave> $claveUsuario2 </clave>
+        <direccion> $direccionCliente2 </direccion>
+        <correoElectronico> $eMailCliente2 </correoElectronico>
+        <empresa> $idEmpresa2 </empresa>
+            <playlistsAsociadas>
             <playlist>$idPlaylist</playlist>
-            <playlist>$idPlaylist</playlist>
+            <playlist>$idPlaylis2</playlist>
+            
             </playlistsAsociadas>
     </cliente>
 </listaClientes>
@@ -73,6 +106,9 @@
 <listaEmpresas>
     <empresa id='$idEmpresa'>
         <nombre>$nombreEmpresa</nombre>
+    </empresa>
+    <empresa id='$idEmpresa2'>
+        <nombre>$nombreEmpresa2</nombre>
     </empresa>
 </listaEmpresas>
 </data>

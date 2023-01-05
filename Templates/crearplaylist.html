@@ -7,7 +7,7 @@
 	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
 
 	<!-- title -->
-	<title>Tienda en línea</title>
+	<title>Cliente</title>
 
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/png" href="assets/img/carrito.png">
@@ -59,29 +59,25 @@
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li class="current-list-item"><a href="index.html">Cerrar Sesión</a>
-								</li>
+								
 								<li><a >Cliente</a>
 								<ul class="sub-menu">
 									<li><a href="CrearCliente.html">Crear Cliente</a></li>
-									<li><a href="ActualizarCliente.html">Actualizar Cliente</a></li>
 									<li><a href="TablaCliente.html">Tabla Cliente</a></li>
 								</ul>
 							</li>
 								
-								<li><a href="#">Producto</a>
+								<li><a href="#">Playlist</a>
 									<ul class="sub-menu">
-										<li><a href="#">Crear producto</a></li>
-										<li><a href="#">Actualizar producto</a></li>
+										<li><a href="crearplaylist.html">Crear Playlist</a></li>
 										<li><a href="Tablaproducto.html">Tabla producto</a></li>
 										
 									</ul>
 								</li>
-								<li><a href="#">Vendedor</a>
+								<li><a href="#">Empresa</a>
 									<ul class="sub-menu">
-										<li><a href="CrearVenta.html">Crear Vendedor</a></li>
-										<li><a href="ActualizarVenta.html">Acualizar Vendedor</a></li>
-										<li><a href="Tablaventa.html">Tabla Vendedor</a></li>
+										<li><a href="CrearEmpresa.html">Crear Empresa</a></li>
+										<li><a href="Tablaventa.html">Tabla Empresa</a></li>
 									</ul>
 								</li>
 								
@@ -102,7 +98,7 @@
 		</div>
 	</div>
 	<!-- end header -->
-	
+
 	<!-- search area -->
 	<div class="search-area">
 		<div class="container">
@@ -120,57 +116,69 @@
 			</div>
 		</div>
 	</div>
-	<!-- end search area -->
-
-	<!-- hero area -->
-	<div class="hero-area hero-bg">
+	<!-- end search arewa -->
+	
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-9 offset-lg-2 text-center">
-					<div class="hero-text">
-						<div class="hero-text-tablecell">
-							<h1>Tienda en línea</h1>
-							<div class="single-product-img">
-								<img src="assets/img/post.jpg" alt="">
-							</div>		
-						</div>
-						
-					</div>
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
 					
+						<h1>Crear Producto</h1>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- end hero area -->
+	<!-- end breadcrumb section -->
 
-	<!-- features list section -->
+	<!-- contact form -->
+	<div class="contact-from-section mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 mb-5 mb-lg-0">
+				 	<div id="form_status"></div>
+					
+					<div class="contact-form">
+						<form type="POST" id="fruitkha-contact" onSubmit="return valid_datas( this );">
+							<p>
+								<input type="text" placeholder="IdPlaylist" id="txtidplaylist" >
+								<input type="text" placeholder="NitCliente" id="txtnitcliente" >
+								
+							</p>
+							<p>
+								<input type="text" placeholder="Vynil" id="txtvynil" >
+								<input type="tel" placeholder="Compacto" name="" id="txtcompacto">
+								
+							</p>
+							<p>
+								<input type="text" placeholder="Categoria" name="" id="txtcategoria">
+								<a type="button" href="crearcancion.html"  class="boxed-btn">Agregar Cancion</a>
+							</p>
+							
+							
+							<input type="hidden" name="token" value="FsWga4&@f6aw" />
+							<a type="button" onclick="CrearCliente()"  class="boxed-btn">Crear</a>
+						</form>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<!-- end contact form -->
 
-	<!-- end features list section -->
+	<!-- find our location -->
 
-	<!-- product section -->
-	
-	<!-- end testimonail-section -->
-	
-	<!-- advertisement section -->
-	
-	<!-- end advertisement section -->
-	
-	<!-- shop banner -->
+	<!-- end find our location -->
 
-	<!-- end shop banner -->
+	<!-- google map section -->
 
-	<!-- latest news -->
-	
-	<!-- end latest news -->
+	<!-- end google map section -->
 
-	<!-- logo carousel -->
-	
-	<!-- end logo carousel -->
 
 	<!-- footer -->
-
-	<!-- end footer -->
-	
 	<!-- copyright -->
 	<div class="copyright">
 		<div class="container">
@@ -195,6 +203,7 @@
 	<!-- end copyright -->
 	
 	<!-- jquery -->
+	<script src="assets/js/newobject.js"></script>
 	<script src="assets/js/jquery-1.11.3.min.js"></script>
 	<!-- bootstrap -->
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
@@ -212,8 +221,10 @@
 	<script src="assets/js/jquery.meanmenu.min.js"></script>
 	<!-- sticker js -->
 	<script src="assets/js/sticker.js"></script>
+	<!-- form validation js -->
+	<script src="assets/js/form-validate.js"></script>
 	<!-- main js -->
 	<script src="assets/js/main.js"></script>
-
+	
 </body>
 </html>

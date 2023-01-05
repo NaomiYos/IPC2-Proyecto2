@@ -12,12 +12,12 @@ class Playlist:
             "idP": self.idP,
             "vynil": self.vynil,
             "compacto": self.compacto,
-            "categoria": self.categoria
+            "categoria": self.categoria,
+            "canciones":self.canciones.LeerCancion()
         }
-    def __repr__(self):
-        return str(self.__dict__)
+   
 class ListaPlaylist:
-    def __init__(self) -> None:
+    def __init__(self) :
         self.Playlist=[]
     def AgregarPlaylist(self,id,vy,com,cat):
         nuevo=Playlist(id,vy,com,cat)
@@ -33,20 +33,38 @@ class ListaPlaylist:
             if producto.idP == id:
                 self.Playlist.remove(producto)
                 return True
-            else:
-                return False
+            
         
-    def BuscarPlaylist(self, id):
-        for play in self.Playlist:
-            print(str(id))
+    def BuscarPlaylists(self, id):
+        
+        for play in self.Playlist:            
             if play.idP == id:
-                
                 return play
+                
     def Imprimir(self):
         print("------------------------")
         for play in self.Playlist:
             print(str(play.idP))
             play.canciones.ImprimirCancion()
-           
-            
+    
+    def AgregarCancionIndividual(self,idplay,canciones):
+      
+        
+            for play in self.Playlist:            
+                if play.idP == idplay:
+                #play.canciones.AgregarCancion(idplay,cancion)
+                    for cancion in canciones:
+                        play.canciones.AgregarCancion( cancion['id'], cancion['nombre'], cancion['anio'], cancion['artista'],cancion['genero'])
+                #return self.readProductos()
+    def AgregarCancionP(self,idplay,idc,namecancion,acancion,artistC,generoC):
+      
+        
+            for play in self.Playlist:            
+                if play.idP == idplay:
+                #play.canciones.AgregarCancion(idplay,cancion)
+                
+                    play.canciones.AgregarCancion( idc,namecancion,acancion,artistC,generoC)
+                #return self.readProductos()
+    def Obtenerlista(self):
+        return self.Playlist     
         
